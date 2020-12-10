@@ -1,3 +1,13 @@
-## Available Scripts
+## Available Scripts Command
 
-Microservices start 
+Microservices start
+
+## Command Minikube
+
+- minikube start
+- minikube stop
+- minikube delete
+
+## Skaffold Command
+
+- skaffold dev
