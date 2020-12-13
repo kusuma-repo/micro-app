@@ -11,3 +11,7 @@ Microservices start
 ## Skaffold Command
 
 - skaffold dev
+
+## Docker Command
+
+- Docker Buidl --t faldikusuma09/
