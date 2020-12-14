@@ -1,12 +1,10 @@
 import express, { NextFunction, Request, Response } from 'express';
 import { body } from 'express-validator';
 import jwt from 'jsonwebtoken';
-
+import { BadRequestError, validateRequest } from '@fks-ticketing/common';
 import { User } from '../models/User';
 import { Password } from '../services/password';
-import { BadRequestError } from '../errors/bad.request.error';
 
-import { validateRequest } from '../middlewares/validate.request';
 const router = express.Router();
 
 router.post(

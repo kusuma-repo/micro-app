@@ -1,14 +1,13 @@
 import express from 'express';
 import { json } from 'body-parser';
-
+import { errorHandler, NotFoundError } from '@fks-ticketing/common';
 import cookieSession from 'cookie-session';
 
 import { currentUserRouter } from './routes/Current-user';
 import { signInRouter } from './routes/Signin';
 import { signOutRouter } from './routes/Signout';
 import { signUpRouter } from './routes/Signup';
-import { errorHandler } from './middlewares/error-handler';
-import { NotFoundError } from './errors/not-found-error';
+
 import 'express-async-errors';
 
 const app = express();
