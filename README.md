@@ -14,4 +14,4 @@ Microservices start
 
 ## Docker Command
 
-- Docker Buidl --t faldikusuma09/
+- Docker buidl -t faldikusuma09/
