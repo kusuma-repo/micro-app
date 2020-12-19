@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { body } from 'express-validator';
-
+import { TicketUpdatePublisher } from '../events/publishers/update.ticket.publish';
+import { natsWrapper } from '../nats.wrapper';
 import {
   validateRequest,
   NotFoundError,
@@ -37,7 +38,12 @@ router.put(
       price: req.body.price,
     });
     await tickets.save();
-
+    await new TicketUpdatePublisher(natsWrapper.client).publish({
+      id: tickets.id,
+      title: tickets.title,
+      price: tickets.price,
+      userId: tickets.userId,
+    });
     res.send(tickets);
   }
 );

@@ -7,7 +7,7 @@ interface TicketAttrs {
 }
 
 interface TicketDoc extends mongoose.Document {
-  titte: string;
+  title: string;
   price: number;
   userId: string;
 }

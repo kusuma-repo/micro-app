@@ -20,3 +20,11 @@ Microservices start
 
 - kubectl exect -it service name sh
 - kubectl exec -it auth-depl-id sh
+
+## yarn published lib
+
+- yarn publish --access public
+
+## port forwarding kubernetes
+
+- kubectl port-forward <name pods> port:port
