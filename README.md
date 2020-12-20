@@ -15,6 +15,7 @@ Microservices start
 ## Docker Command
 
 - Docker buidl -t faldikusuma09/
+- Docker push faldikusuma09/
 
 ## log in into shell pod kubernetes
 
