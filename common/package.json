@@ -1,6 +1,6 @@
 {
   "name": "@fks-ticketing/common",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "description": "share lib",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
