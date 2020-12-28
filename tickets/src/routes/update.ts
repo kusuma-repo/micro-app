@@ -7,6 +7,7 @@ import {
   NotFoundError,
   requireAuth,
   NotAuthorized,
+  BadRequestError,
 } from '@fks-ticketing/common';
 
 import { Ticket } from '../models/tickets';
@@ -29,6 +30,9 @@ router.put(
     if (!tickets) {
       return next(new NotFoundError());
     }
+    if (tickets.orderId) {
+      return next(new BadRequestError('Cannot edit reserved ticket'));
+    }
     if (tickets.userId !== req.currentUser!.id) {
       return next(new NotAuthorized());
     }
@@ -43,6 +47,7 @@ router.put(
       title: tickets.title,
       price: tickets.price,
       userId: tickets.userId,
+      version: tickets.version,
     });
     res.send(tickets);
   }
