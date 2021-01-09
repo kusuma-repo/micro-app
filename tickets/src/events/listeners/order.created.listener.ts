@@ -1,6 +1,6 @@
 import { Listener, OrderCreatedEvent, Subjects } from '@fks-ticketing/common';
 import { Message } from 'node-nats-streaming';
-import { Ticket } from '../../models/tickets';
+import { Ticket } from '../../models/ticket';
 import { TicketUpdatePublisher } from '../publishers/update.ticket.publish';
 export class OrderCreatedListener extends Listener<OrderCreatedEvent> {
   subject: Subjects.OrderCreated = Subjects.OrderCreated;

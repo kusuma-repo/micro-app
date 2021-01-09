@@ -10,7 +10,7 @@ import {
   BadRequestError,
 } from '@fks-ticketing/common';
 
-import { Ticket } from '../models/tickets';
+import { Ticket } from '../models/ticket';
 
 const router = express.Router();
 

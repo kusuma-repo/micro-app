@@ -1,7 +1,7 @@
 import express, { Response, Request } from 'express';
 import { requireAuth, validateRequest } from '@fks-ticketing/common';
 import { body } from 'express-validator';
-import { Ticket } from '../models/tickets';
+import { Ticket } from '../models/ticket';
 
 import { TicketCreatedPublisher } from '../events/publishers/create.ticket.publish';
 import { natsWrapper } from '../nats.wrapper';

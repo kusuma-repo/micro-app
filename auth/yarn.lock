@@ -278,10 +278,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@fks-ticketing/common@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@fks-ticketing/common/-/common-1.0.5.tgz#b28b3d3596e274a605608979ab024e4a906575c3"
-  integrity sha512-7uQw8yYlIPQRAMlZAoPiMgG8oDkV5oc6ql01FNdOA8yp9M7Ve8PbzrVQGfV4wsHTDTizw0EynTrdJCZgE/ACGg==
+"@fks-ticketing/common@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@fks-ticketing/common/-/common-1.1.6.tgz#b61dfd193d0fd3a4d98ae797671a11a1f505784b"
+  integrity sha512-wRyo4GEdGzGHVH8LfwJl2h1fwJeaxgOdcJWZokUleg5aFetY3+rl5peIJTWCrsYsfig+tCo3mU0uFUyAbGF6Gg==
   dependencies:
     "@types/cookie-session" "^2.0.42"
     "@types/express" "^4.17.9"

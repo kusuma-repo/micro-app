@@ -1,7 +1,7 @@
 import express, { Response, Request, NextFunction } from 'express';
 import { NotFoundError } from '@fks-ticketing/common';
 
-import { Ticket } from '../models/tickets';
+import { Ticket } from '../models/ticket';
 const router = express.Router();
 
 router.get(

@@ -1,6 +1,6 @@
 import { Listener, OrderCancelledEvent, Subjects } from '@fks-ticketing/common';
 import { Message } from 'node-nats-streaming';
-import { Ticket } from '../../models/tickets';
+import { Ticket } from '../../models/ticket';
 import { TicketUpdatePublisher } from '../publishers/update.ticket.publish';
 export class OrderCancelledListener extends Listener<OrderCancelledEvent> {
   subject: Subjects.OrderCancelled = Subjects.OrderCancelled;
@@ -10,18 +10,19 @@ export class OrderCancelledListener extends Listener<OrderCancelledEvent> {
     /*
       FInd the ticket that order is reservation
     */
+    console.log(data);
     const ticket = await Ticket.findById(data.ticket.id);
     /*
       if no ticket throw error
     */
     if (!ticket) {
-      throw new Error('Ticket Not Found');
+      return new Error('Ticket Not Found');
     }
     /*
       mark the tickets as being reserved by setting its orderId property
     */
     ticket.set({ orderId: undefined });
-    /*
+    /*  
       Save the ticket
     */
     await ticket.save();
