@@ -10,7 +10,7 @@ export class OrderCancelledListener extends Listener<OrderCancelledEvent> {
     /*
       FInd the ticket that order is reservation
     */
-    console.log(data);
+
     const ticket = await Ticket.findById(data.ticket.id);
     /*
       if no ticket throw error
