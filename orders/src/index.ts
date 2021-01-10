@@ -6,6 +6,7 @@ import { TicketUpdateListener } from './events/listeners/ticket.update.listen';
 import { PaymentCreatedListener } from './events/listeners/payment.create.listen';
 import { ExpirationCompleteListener } from './events/listeners/expiration.complete.listen';
 const start = async () => {
+  console.log('app starting up...');
   if (!process.env.JWT_KEY) {
     throw new Error('JWT_KEY must be defined');
   }
