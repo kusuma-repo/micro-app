@@ -1,0 +1,14 @@
+
+name: auth-test
+
+on:
+  pull_request:
+    paths: 
+      - 'auth/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd auth && yarn && yarn run test:ci
